@@ -1,0 +1,17 @@
+<nav class='navbar navbar-expand navbar-dark bg-dark'>
+    <a class='navbar-brand'>{{pageTitle}}</a>
+    <div class="collapse navbar-collapse">
+    <ul class='nav navbar-nav navbar-left'>
+      <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/products']"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+      <li ><a class='nav-link' routerLinkActive='active' [routerLink]="['/cart']"> 
+        <i class="fa fa-shopping-cart">
+          <span class="mt-2"> {{productService.headerCartCount}}</span>
+        </i>
+      </a></li>
+     
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a class='nav-link' routerLinkActive='active' (click)="onLogoutClick()"><i class="fa fa-sign-in" aria-hidden="true"></i> Logout</a></li>
+    </ul>
+    </div>
+  </nav>
